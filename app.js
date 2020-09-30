@@ -74,11 +74,28 @@ d3.csv("data/data.csv").then(function(StateData) {
       
     var textLabels = text
       .attr("dx",d => xLinearScale(d.poverty))
-      .attr("dy",d => yLinearScale(d.healthcare))
+      .attr("dy",d => yLinearScale(d.healthcare)+3)
       .text( function (d) { return (d.abbr)})
-      .attr("class", "stateText");
-      
-     
+      .classed("stateText", true)
+      .style("font-size", "9px")
+      .style("font-weight", "800")
+    
+      chartGroup.append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 0 - margin.left + 40)
+      .attr("x", 0 - (height / 2))
+      .attr("dy", "1em")
+      .style("font-weight", "bold")
+      .attr("class", "aText")
+      .text("Lacks Healthcare (%)");
+
+    chartGroup.append("text")
+      .attr("transform", `translate(${width / 2}, ${height + margin.top + 30})`)
+      .attr("class", "aText")
+      .style("font-weight", "bold")
+      .text("In Poverty (%)");
+  }).catch(function(error) {
+    console.log(error);  
     
 })
 
