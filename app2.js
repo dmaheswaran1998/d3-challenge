@@ -195,7 +195,7 @@ d3.csv("data/data.csv").then(function(StateData, err) {
     .call(leftAxis);
 
   // append initial circles
-  var circlesGroup = chartGroup.selectAll("circle")
+  var circlesGroup = chartGroup.selectAll(".circle")
     .data(StateData)
     .enter()
     .append("circle")
@@ -401,4 +401,6 @@ d3.csv("data/data.csv").then(function(StateData, err) {
 });
 }
 makeResponsive();
+
+d3.select(window).on("resize", makeResponsive);
 
