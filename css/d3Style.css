@@ -21,6 +21,7 @@
 .inactive:hover {
   fill: #000;
   cursor: pointer;
+  border-radius: 2px;
 }
 
 /* font size dependent on radius, see app.js */
@@ -51,6 +52,10 @@
   background: rgba(0, 0, 0, 0.8);
   border-radius: 4px;
 }
+
+.circle:hover {
+  color: blue !important;
+} 
 
 /* Mobile Rules */
 @media screen and (max-width: 530px) {
