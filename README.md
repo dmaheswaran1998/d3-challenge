@@ -4,7 +4,7 @@
 
 ## In order to view:
 
-1.Go into d3-challenge folder on terminal
+1. Go into d3-challenge folder on terminal
 2. run the command python -m http.server in the window
 3. You should then be able to view the website on the URL http://0.0.0.0:8000/
 
