@@ -160,7 +160,7 @@ function updateToolTip(chosenXAxis, chosenYAxis, circlesGroup) {
 
 
 // Retrieve data from the CSV file and execute everything below
-d3.csv("data/data.csv").then(function(StateData, err) {
+d3.csv("/static/js/data.csv").then(function(StateData, err) {
   if (err) throw err;
 
   // parse data
