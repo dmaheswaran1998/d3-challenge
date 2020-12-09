@@ -1,5 +1,4 @@
 from flask import Flask, render_template, redirect, jsonify
-import data
 
 # Create an instance of Flask
 app = Flask(__name__)
